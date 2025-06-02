@@ -1,0 +1,48 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+// Hardware Configuration
+#define FRSKY_UART_ID uart0
+#define FRSKY_TX_PIN 0
+#define FRSKY_RX_PIN 1
+#define FRSKY_BAUD_RATE 57600
+
+#define CRSF_UART_ID uart1
+#define CRSF_TX_PIN 4
+#define CRSF_RX_PIN 5
+#define CRSF_BAUD_RATE 420000
+
+#define LED_PIN 25
+
+// Protocol Configuration
+#define FRSKY_BUFFER_SIZE 256
+#define CRSF_MAX_PACKET_SIZE 64
+
+// Timing Configuration
+#define HEARTBEAT_INTERVAL_US 100000
+#define LED_BLINK_INTERVAL_US 500000
+#define TELEMETRY_TIMEOUT_US 5000000
+
+// Debug Configuration
+#define DEBUG_ENABLED 1
+#define DEBUG_FRSKY_PACKETS 0
+#define DEBUG_CRSF_PACKETS 0
+#define DEBUG_CONVERSIONS 1
+
+// Feature Configuration
+#define ENABLE_GPS_CONVERSION 1
+#define ENABLE_BATTERY_CONVERSION 1
+#define ENABLE_ALTITUDE_CONVERSION 1
+#define ENABLE_VARIO_CONVERSION 1
+#define ENABLE_TEMPERATURE_CONVERSION 1
+#define ENABLE_RPM_CONVERSION 1
+
+// CRSF Configuration
+#define CRSF_DEVICE_ADDRESS CRSF_ADDRESS_FLIGHT_CONTROLLER
+#define ENABLE_CRSF_GPS 1
+#define ENABLE_CRSF_BATTERY 1
+#define ENABLE_CRSF_VARIO 1
+#define ENABLE_CRSF_BARO_ALT 1
+#define ENABLE_CRSF_HEARTBEAT 1
+
+#endif // CONFIG_H
